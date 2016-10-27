@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="End to End Build" default="sendmail" basedir=".">
+    
+    <target name="init">
+        <tstamp />
+        <property file="build.properties" />
+        
+        <path id="classpath">
+            <pathelement path="${servlet.jar}" />
+            <pathelement path="${junit.jar}" />
+        </path>
+        <property name="classpath" refid="classpath" />
+    </target>
+    
+    <target name="startrecorder">
+        <record name="${name}-${DSTAMP}-log.txt" 
+                action="start" 
+                append="false" />
+    </target>
+    
+    <target name="prepare" depends="init, startrecorder">
+        <mkdir dir="${build.dir.classes}" />
+        <mkdir dir="${reports.dir}" />
+    </target>
+    
+    <target name="fetch" depends="init">
+        <!-- <cvs dest="${src.dir}"
+                  cvsRoot="${cvs.root}"
+                  command="update -P -d"
+                  failonerror="true" />
+        /> -->
+    </target>
+    
+    <target name="compile" depends="prepare, fetch">
+        <javac srcdir="${src.dir}" 
+               destdir="${build.dir.classes}" 
+               classpath="${classpath}" 
+               compiler="${build.compiler}"
+               debug="on"
+               includeantruntime="false"  />
+    </target>
+ 
+    <target name="test" depends="compile">
+        <junit failureproperty="testsFailed" />
+        <junit printsummary="yes" haltonfailure="yes" showoutput="yes" >
+            <classpath>
+                <pathelement path="${classpath}" />
+                <pathelement path="${build.dir.classes}" />
+            </classpath>
+            <formatter type="xml" />
+            <batchtest fork="yes" todir="${reports.dir}/">
+                <fileset dir="${src.dir}">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+        
+        <junitreport todir="${reports.dir}">
+            <fileset dir="${reports.dir}" includes="TEST-*.xml"/>
+            <report format="noframes" todir="${reports.dir}"/>
+        </junitreport>
+    </target>
+    
+    <target name="war" depends="test" unless="testsFailed">
+        <war destfile="${build.dir}/${war.name}" webxml="${etc.dir}/web.xml">
+            <fileset dir="html"/>
+            <fileset dir="jsp"/>
+            <lib dir="libs"/>
+            <classes dir="${build.dir.classes}">
+                <include name="**/*.class" />
+                <exclude name="**/*Test*.class" />
+            </classes>
+            <zipfileset dir="images"
+              prefix="images"/>
+        </war>
+    </target>
+    
+    <target name="deploy" depends="war" unless="testsFailed">
+       <ftp server="${server.name}"
+             remotedir="${remote.dir}"
+             userid="${user.id}"
+             password="${password}"
+             passive="yes"
+             binary="yes"
+             verbose="yes">
+            <fileset dir="${build.dir}">
+                <include name="${war.name}"/>
+            </fileset>
+        </ftp> 
+    </target>
+    
+    <target name="stoprecorder">
+        <record name="${name}-${DSTAMP}-log.txt" 
+                action="stop" />
+    </target>
+    
+    <target name="sendmail" depends="deploy, stoprecorder">
+        <zip destfile="${name}-${DSTAMP}-reports.zip" 
+             basedir="${reports.dir}"
+             excludes="**/*.xml" />
+        
+        <mail mailhost="${mail.host}" 
+              user="${mail.user}"
+              password="${mail.pass}"
+              ssl="true"
+              mailport="${mail.port}" 
+              subject="Test build - ${DSTAMP}">
+            <from address="${mail.from.address}"/>
+            <to address="${mail.to.address}"/>
+            <message src="${name}-${DSTAMP}-log.txt" />
+            <attachments>
+                <fileset dir=".">
+                    <include name="${name}-${DSTAMP}-reports.zip"/>
+                </fileset>
+            </attachments>
+        </mail>
+    </target>
+    
+    <target name="clean" depends="init">
+        <delete dir="${build.dir}" />
+        <delete dir="${reports.dir}" />
+    </target>
+    
+ </project>

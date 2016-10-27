@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation="schema.xsd">
+   <MyMessage>Hello World!</MyMessage>
+   <MyMessage>ANT AND XML Schema ROCK</MyMessage>
+</MyMessages>

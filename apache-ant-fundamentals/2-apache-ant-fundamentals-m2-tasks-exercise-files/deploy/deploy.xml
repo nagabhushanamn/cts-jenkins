@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Deploy Example" default="ftp" basedir=".">
+    
+    <target name="init">
+        <property name="server.name" value="your.server.com" />
+        <property name="remote.dir" value="incoming" />
+        <property name="user.id" value="your.email" />
+        <property name="password" value="your.password" />
+        <property name="deploy.dir" value="deploy" />
+        <property name="docs.dir" value="docs" />
+    </target>
+    
+    <target name="copy" depends="init">
+        <copy file="${docs.dir}/test.html" todir="${deploy.dir}" />
+    </target>
+    
+    <target name="ftp" depends="init">
+        <ftp server="${server.name}"
+             remotedir="${remote.dir}"
+             userid="${user.id}"
+             password="${password}"
+             passive="yes"
+             binary="no"
+             verbose="yes">
+            <fileset dir="${docs.dir}">
+                <include name="*.html"/>
+            </fileset>
+        </ftp>
+    </target>
+    
+    <target name="get" depends="init">
+        <ftp action="get"
+             server="ftp.apache.org"
+             userid="anonymous"
+             password="me@myorg.com">
+            <fileset dir="${docs}">
+                <include name="*.html"/>
+            </fileset>
+        </ftp>
+    </target>
+    
+</project>

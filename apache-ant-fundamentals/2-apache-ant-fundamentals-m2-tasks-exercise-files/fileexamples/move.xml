@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Move Example" default="movefile" basedir=".">
+    
+    <target name="movefile">
+        <move file="etc/READ_ME.txt" tofile="backup/READ_ME.txt"/>
+    </target>
+    
+</project>

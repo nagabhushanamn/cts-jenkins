@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Jar Examples" default="jarExample1" basedir=".">
+    
+    <target name="init">
+        <property name="src.dir" value="src" />
+        <property name="build.dir" value="build" />
+        <property name="classes.dir" value="${build.dir}/classes" />
+        <property name="etc.dir" value="etc" />
+    </target>
+    
+    <target name="jarExample1" depends="init">
+        <jar destfile="${src.dir}/lib/app.jar"
+             basedir="${classes.dir}"
+             excludes="**/Test.class"
+             update="true"
+             manifest="${etc.dir}/MANIFEST.MF"
+        />
+    </target>
+    
+</project>

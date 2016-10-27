@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Get Example" default="getfile" basedir=".">
+    
+    <target name="getfile">
+        <get src="http://ant.apache.org/" dest="etc/index.html"/>
+    </target>
+    
+</project>

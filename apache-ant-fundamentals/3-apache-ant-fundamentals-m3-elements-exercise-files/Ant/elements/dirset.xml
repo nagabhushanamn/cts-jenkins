@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dirset dir="build">
+    <patternset id="classes">
+        <include name="**/classes" />
+        <exclude name="**/*Test*" />
+    </patternset>
+</dirset>
+
+
+
+<dirset dir="build">
+    <include name="**/classes" />
+    <exclude name="**/*Test*" />
+</dirset>
+
+
+
+<dirset dir="build"
+        includes="**/classes"
+        excludes="**/*Test*" />

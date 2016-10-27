@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- and example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <and>
+        <size value="4" units="Ki" when="more"/>
+        <date datetime="01/01/2001 12:00 AM" when="before"/>
+    </and>
+</fileset>
+
+<!-- or example -->
+<fileset dir="${image.dir}">
+    <or>
+        <filename name="*.png"/>
+        <filename name="*.gif"/>
+        <filename name="*.jpg"/>
+    </or>
+</fileset>
+
+<!-- not example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <not>
+        <contains text="test"/>
+    </not>
+</fileset>
+
+<!-- none example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <none>
+        <present targetdir="${dest.dir}"/>
+    </none>
+</fileset>
+
+

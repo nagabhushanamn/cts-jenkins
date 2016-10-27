@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Paths Example" default="compile" basedir=".">
+    
+    <target name="init">
+        <path id="classpath">
+            <pathelement path="{$servlet.dir}/servlet.jar" />
+            <pathelement path="{$javamail.dir}/mail.jar" />
+            <fileset dir="{$lib.dir}">
+                <include name="**/*.jar" />
+            </fileset>
+        </path>
+    </target>
+    
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="build">
+            <classpath>
+                <path refid="classpath" />
+                <pathelement path="${xalan.jar}" />
+            </classpath>
+        </javac>
+    </target>
+    
+</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<project name="FirstTest" default="world">
+    <target name="hello">
+        <echo message="Hello" />
+    </target>
+    <target name="world" depends="hello">
+        <echo message="World!" />
+    </target>
+</project>

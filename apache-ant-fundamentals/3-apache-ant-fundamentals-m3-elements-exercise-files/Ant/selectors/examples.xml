@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Selectors -->
+<!-- date example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <date datetime="01/01/2014 12:00 AM" when="after"/>
+</fileset>
+
+<!-- present example -->
+<fileset dir="${v2.src.dir}" includes="**/*.java">
+    <present present="srconly" targetdir="${v1.src.dir}"/>
+</fileset>
+
+<!-- size example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <size value="1" units="Ki" when="less" />
+</fileset>
+
+<!-- contains example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <contains text="TODO" casesensitive="no"/>
+</fileset>
+
+<!-- containsregexp example -->
+<fileset dir="${doc.path}" includes="*.txt">
+    <containsregexp expression="[4-6]\.[0-9]"/>
+</fileset>
+
+<!-- depend example -->
+<fileset dir="${ant.1.5}/src/main" includes="**/*.java">
+    <depend targetdir="${ant.1.4}/src/main"/>
+</fileset>
+
+<!-- depth example -->
+<fileset dir="${src.dir}" includes="**/*.java">
+    <depth max="1"/>
+</fileset>
+
+<!-- different example -->
+<fileset dir="${ant.1.5}/src/main" includes="**/*.java">
+    <different targetdir="${ant.1.4}/src/main"
+        ignoreFileTimes="true"/>
+</fileset>
+
+
+
+
+

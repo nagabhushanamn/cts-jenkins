@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Condition Example" basedir=".">
+    
+    <target name="testconditions">
+        
+        <condition property="javamail.complete">
+            <and>
+                <available classname="javax.activation.DataHandler"/>
+                <available classname="javax.mail.Transport"/>
+            </and>
+        </condition>
+        
+        
+        <condition property="isMacOsButNotMacOsX">
+            <and>
+                <os family="mac"/>
+
+                <not>
+                    <os family="unix"/>
+
+                </not>
+            </and>
+        </condition>
+        
+    </target>
+ 
+</project>

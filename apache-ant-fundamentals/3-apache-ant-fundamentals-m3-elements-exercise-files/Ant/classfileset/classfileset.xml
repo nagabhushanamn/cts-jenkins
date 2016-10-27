@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<jar destfile="tools.jar">
+    <fileset refid="reqdClasses"/>
+</jar>
+
+<classfileset id="reqdClasses" dir="${classes.dir}">
+    <rootfileset dir="${classes.dir}" includes="com/pluralsight/tools/Util*.class"/>
+</classfileset>
+

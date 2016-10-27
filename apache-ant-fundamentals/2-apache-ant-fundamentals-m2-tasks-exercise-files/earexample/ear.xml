@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Ear Example" default="ear" basedir=".">
+    
+    <target name="init">
+        <property name="src.dir" value="src" />
+        <property name="build.dir" value="build" />
+    </target>
+    
+    <target name="ear" depends="init">
+        <ear destfile="${build.dir}/example.ear" 
+             appxml="${src.dir}/metadata/application.xml">
+            <fileset dir="${build.dir}" includes="*.jar,*.war"/>
+        </ear>
+    </target>
+    
+</project>

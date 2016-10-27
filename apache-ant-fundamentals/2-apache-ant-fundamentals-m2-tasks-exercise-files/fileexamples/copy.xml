@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Copy Example" default="copyfile" basedir=".">
+    
+    <target name="copyfile">
+        <copy file="etc/MANIFEST.MF" tofile="backup/MANIFEST.MF"/>
+    </target>
+    
+</project>

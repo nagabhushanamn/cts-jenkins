@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root-tag>
+    <version value="0.0.1"/>
+    <build folder="build">
+        <classes id="build.classes" location="${build.folder}/classes"/>
+        <reference refid="build.classes"/>
+    </build>
+    <compile>
+        <classpath pathid="compile.classpath">
+            <pathelement location="${build.classes}"/>
+        </classpath>
+    </compile>
+    <run-time>
+        <jars>*.jar</jars>
+        <classpath pathid="run-time.classpath">
+            <path refid="compile.classpath"/>
+            <pathelement path="${run-time.jars}"/>
+        </classpath>
+    </run-time>
+</root-tag>

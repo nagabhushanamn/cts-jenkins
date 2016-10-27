@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<patternset id="classes">
+    <include name="**/*.class" />
+    <exclude name="**/*Test*.class" />
+</patternset>
+
+
+<patternset id="classes"
+            includes="**/*.class"
+            excludes="**/*Test*.class" />

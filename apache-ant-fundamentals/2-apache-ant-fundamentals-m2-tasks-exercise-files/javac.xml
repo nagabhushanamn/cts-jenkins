@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="javac Example" default="all" basedir=".">
+    <target name="compileExample1">
+        <javac srcdir="${src.dir}"
+               destdir="${build.dir}"
+               includes="pluralsight/info/**, pluralsight/web/**"
+               excludes="pluralsight/test/**"
+        />
+    </target>
+    
+    <target name="compileExample2">
+        <javac srcdir="${src.dir}"
+               destdir="${build}">
+            <include name="pluralsight/info/**"/>
+            <include name="pluralsight/web/**"/>
+            <exclude name="pluralsight/test/**"/>
+        </javac>
+    </target>
+    
+    <target name="compileExample3">
+        <javac srcdir="${src.dir}"
+               destdir="${build}"
+               debug="on"
+               deprecation="on"
+               compiler="modern"
+               classpath="junit.jar"
+               fork="true"
+        />
+    </target>
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Mail Example" default="mail" basedir=".">
+    
+    <target name="mail">
+        <mail mailhost="smtp.mail.com" 
+              user="yourname@mycompany.com"
+              password="password"
+              ssl="true"
+              mailport="465" 
+              subject="Test build">
+            <from address="yourname@mycompany.com"/>
+            <to address="thebigboss@mycompany.com"/>
+            <message>The nightly build has completed</message>
+            <attachments>
+                <fileset dir="reports">
+                    <include name="**/*.zip"/>
+                </fileset>
+            </attachments>
+        </mail>
+    </target>
+    
+</project>

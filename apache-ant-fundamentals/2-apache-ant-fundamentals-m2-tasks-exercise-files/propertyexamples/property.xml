@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="property example" default="printproperties" basedir=".">
+    
+    <property file="build.properties" />
+    
+    <target name="printproperties">
+        <echo>Project Name: ${project.name} </echo>
+        <echo>Source Dir: ${src.dir} </echo>
+        <echo>Build Dir: ${build.dir} </echo>
+        <echo>Classes Dir: ${classes.dir} </echo>
+        <echo>Etc Dir: ${etc.dir} </echo>
+    </target>
+</project>

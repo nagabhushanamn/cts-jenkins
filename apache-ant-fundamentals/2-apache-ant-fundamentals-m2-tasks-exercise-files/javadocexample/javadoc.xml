@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JavaDoc Example" default="javadoc" basedir=".">
+    <target name="javadoc">
+        <javadoc packagenames="com.pluralsight.*"
+                 sourcepath="src"
+                 excludepackagenames="com.pluralsight.test.*"
+                 defaultexcludes="yes"
+                 destdir="docs/api"
+                 author="true"
+                 version="true"
+                 use="true"
+                 windowtitle="Pluralsight API">
+            <doctitle><![CDATA[<h1>Pluralsight</h1>]]></doctitle>
+            <bottom><![CDATA[<i>Copyright &#169; 2014 Pluralsight.com. 
+                                All Rights Reserved.</i>]]></bottom>
+        </javadoc>
+    </target>
+</project>

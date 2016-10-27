@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Strip java comments" default="strip" basedir=".">
+    
+    <target name="strip">
+        <copy todir="build/stripjava">
+            <filterchain>
+                <stripjavacomments />
+            </filterchain>
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    
+</project>

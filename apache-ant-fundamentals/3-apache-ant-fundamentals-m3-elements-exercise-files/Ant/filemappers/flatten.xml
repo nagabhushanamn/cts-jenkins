@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Filemapper flatten example" default="flatten" basedir=".">
+    
+    <target name="flatten">
+        <copy todir="build/flatten">
+            <mapper type="flatten" />
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    
+</project>

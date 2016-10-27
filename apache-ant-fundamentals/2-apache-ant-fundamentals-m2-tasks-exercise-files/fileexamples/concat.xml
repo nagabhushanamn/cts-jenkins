@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Concat Example" default="concatfile" basedir=".">
+    
+    <target name="concatfile">
+        <concat destfile="etc/READ_ME.txt" append="yes"> Hello, World!</concat>
+    </target>
+    
+</project>

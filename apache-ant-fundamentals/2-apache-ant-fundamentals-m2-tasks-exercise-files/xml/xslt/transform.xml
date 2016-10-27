@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="XSLT Example" default="transform" basedir=".">
+    
+    <target name="transform">
+        <xslt in="input.xml" 
+              out="output.xml"
+              style="transform.xslt">
+        </xslt>
+    </target>
+    
+</project>

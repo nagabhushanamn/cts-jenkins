@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Filemapper regexp example" default="regexp" basedir=".">
+    
+    <target name="regexp">
+        <copy todir="build/regexp">
+            <mapper type="regexp" from="^(.*).java$$" to="\1.java.backup" />
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    
+</project>

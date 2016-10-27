@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="End to End Build" default="sendmail" basedir=".">
+    
+    <target name="init">
+        <tstamp />
+        <property file="build.properties" />
+    </target>
+    
+    <target name="startrecorder"></target>
+    
+    <target name="prepare" depends="init, startrecorder">
+        <mkdir dir="${build.dir.classes}" />
+        <mkdir dir="${reports.dir}" />
+    </target>
+    
+    <target name="fetch" depends="init"></target>
+    
+    <target name="compile" depends="prepare, fetch"></target>
+    
+    <target name="test" depends="compile">
+        <junit failureproperty="testsFailed" />
+    </target>
+    
+    <target name="war" depends="test" unless="testsFailed"></target>
+    
+    <target name="deploy" depends="war" unless="testsFailed"></target>
+    
+    <target name="stoprecorder"></target>
+    
+    <target name="sendmail" depends="deploy, stoprecorder"></target>
+    
+    <target name="clean" depends="init">
+        <delete dir="${build.dir}" />
+        <delete dir="${reports.dir}" />
+    </target>
+    
+</project>

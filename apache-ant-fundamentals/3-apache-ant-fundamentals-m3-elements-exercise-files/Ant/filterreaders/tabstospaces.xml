@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Tabs to spaces example" default="replace" basedir=".">
+    
+    <tstamp />
+    
+    <target name="replace">
+        <copy todir="build/tabstospaces">
+            <filterchain>
+                <tabstospaces tablenght="4" />
+            </filterchain>
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Constants Example" default="constants" basedir=".">
+    
+    <target name="constants">
+        <copy todir="build/constants">
+            <filterchain>
+                <classconstants />
+            </filterchain>
+            <fileset dir="classes">
+                <include name="**/*.class" />
+            </fileset>
+            <mapper type="glob" from="*.class" to="*.txt" />
+        </copy>
+    </target>
+    
+</project>

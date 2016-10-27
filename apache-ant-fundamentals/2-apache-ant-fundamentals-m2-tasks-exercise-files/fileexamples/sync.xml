@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Sync Example" default="syncfiles" basedir=".">
+    
+    <target name="syncfiles">
+        <sync todir="backup">
+            <fileset dir="etc"/>
+        </sync>
+    </target>
+    
+</project>

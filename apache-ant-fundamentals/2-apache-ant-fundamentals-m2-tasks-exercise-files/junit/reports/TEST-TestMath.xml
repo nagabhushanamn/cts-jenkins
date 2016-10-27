@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="pentium4" name="TestMath" skipped="0" tests="2" time="0.405" timestamp="2014-06-05T23:49:34">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="netbeans.user" value="C:\Documents and Settings\Rusty\Application Data\NetBeans\7.3.1" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="os.name" value="Windows XP" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_25\jre\classes" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="C:\apache-ant-1.9.4" />
+    <property name="java.runtime.version" value="1.7.0_25-b17" />
+    <property name="netbeans.default_userdir_root" value="C:\Documents and Settings\Rusty\Application Data\NetBeans" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="user.name" value="Rusty" />
+    <property name="build.dir" value="build" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin" />
+    <property name="reports.dir" value="reports" />
+    <property name="nb.native.filechooser" value="false" />
+    <property name="ant.project.default-target" value="test" />
+    <property name="ant.project.name" value="JUnit Example" />
+    <property name="java.version" value="1.7.0_25" />
+    <property name="sun.java2d.dpiaware" value="true" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="netbeans.productversion" value="NetBeans IDE 7.3.1 (Build 201306052037)" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="51.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_25\jre" />
+    <property name="netbeans.buildnumber" value="201306052037" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="ant.file" value="C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\junit.xml" />
+    <property name="os.version" value="5.1" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
+    <property name="netbeans.hash.code" value="unique=NB_CND_GFMOD_JAVA_MOB_PHP_WEBCOMMON_WEBEE0155732f5-0f2a-49cd-9089-5578abae1429_862843d1-e908-43d0-929e-4753d9b6c7c6" />
+    <property name="netbeans.autoupdate.country" value="US" />
+    <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="23.25-b01" />
+    <property name="user.variant" value="" />
+    <property name="netbeans.dynamic.classpath" value="C:\Program Files\NetBeans 7.3.1\platform\core\core.jar;C:\Program Files\NetBeans 7.3.1\platform\core\org-openide-filesystems.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\core_ja.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\core_pt_BR.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\core_ru.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\core_zh_CN.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\org-openide-filesystems_ja.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\org-openide-filesystems_pt_BR.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\org-openide-filesystems_ru.jar;C:\Program Files\NetBeans 7.3.1\platform\core\locale\org-openide-filesystems_zh_CN.jar;C:\Program Files\NetBeans 7.3.1\nb\core\org-netbeans-upgrader.jar;C:\Program Files\NetBeans 7.3.1\nb\core\locale\core_nb.jar;C:\Program Files\NetBeans 7.3.1\nb\core\locale\org-netbeans-upgrader_ja.jar;C:\Program Files\NetBeans 7.3.1\nb\core\locale\org-netbeans-upgrader_pt_BR.jar;C:\Program Files\NetBeans 7.3.1\nb\core\locale\org-netbeans-upgrader_ru.jar;C:\Program Files\NetBeans 7.3.1\nb\core\locale\org-netbeans-upgrader_zh_CN.jar" />
+    <property name="jna.boot.library.name" value="jnidispatch-340" />
+    <property name="sun.awt.enableExtraMouseButtons" value="true" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="ant.junit.enabletestlistenerevents" value="true" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="user.script" value="" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="user.home" value="C:\Documents and Settings\Rusty" />
+    <property name="netbeans.home" value="C:\Program Files\NetBeans 7.3.1\platform" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Common Files\iZotope\Runtimes;C:\Program Files\OpenLibraries\bin;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\MySQL\MySQL Enterprise Backup 3.8.2\;%ANT_HOME\bin;C:\Program Files\CVSNT\;C:\Program Files\Java\jdk1.7.0_25\bin;C:\apache-ant-1.9.4\bin;C:\android-sdk-windows\tools;." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner TestMath skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\reports\TEST-TestMath.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\reports\TEST-TestMath.xml crashfile=C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\junitvmwatcher6703561272646677318.properties propsfile=C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\junit9101159076003269994.properties" />
+    <property name="java.class.path" value="C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\lib\junit.jar;C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\build;C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit;C:\PROGRA~1\JMF21~1.1E\lib\sound.jar;C:\PROGRA~1\JMF21~1.1E\lib\jmf.jar;C:\PROGRA~1\JMF21~1.1E\lib;C:\;C:\junit3.8.1\junit.jar;C:\JNA\jna.jar;C:\apache-ant-1.9.4\lib\ant-launcher.jar;C:\apache-ant-1.9.4\lib\ant.jar;C:\apache-ant-1.9.4\lib\ant-junit.jar;C:\apache-ant-1.9.4\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="jdk.home" value="C:\Program Files\Java\jdk1.7.0_25" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.JUnit Example" value="C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit\junit.xml" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 3" />
+    <property name="java.io.tmpdir" value="C:\DOCUME~1\Rusty\LOCALS~1\Temp\" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="netbeans.dirs" value="C:\Program Files\NetBeans 7.3.1\nb;C:\Program Files\NetBeans 7.3.1\ergonomics;C:\Program Files\NetBeans 7.3.1\ide;C:\Program Files\NetBeans 7.3.1\java;C:\Program Files\NetBeans 7.3.1\apisupport;C:\Program Files\NetBeans 7.3.1\webcommon;C:\Program Files\NetBeans 7.3.1\websvccommon;C:\Program Files\NetBeans 7.3.1\enterprise;C:\Program Files\NetBeans 7.3.1\mobility;C:\Program Files\NetBeans 7.3.1\profiler;C:\Program Files\NetBeans 7.3.1\python;C:\Program Files\NetBeans 7.3.1\php;C:\Program Files\NetBeans 7.3.1\identity;C:\Program Files\NetBeans 7.3.1\harness;C:\Program Files\NetBeans 7.3.1\cnd;C:\Program Files\NetBeans 7.3.1\dlight;C:\Program Files\NetBeans 7.3.1\groovy;C:\Program Files\NetBeans 7.3.1\extra;C:\Program Files\NetBeans 7.3.1\javacard;C:\Program Files\NetBeans 7.3.1\javafx" />
+    <property name="netbeans.autoupdate.language" value="en" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="os.arch" value="x86" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_25\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Program Files\NetBeans 7.3.1" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="apple.awt.graphics.UseQuartz" value="true" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="basedir" value="C:\Documents and Settings\Rusty\My Documents\NetBeansProjects\Ant\junit" />
+    <property name="sun.awt.datatransfer.timeout" value="1000" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="ant.file.type.JUnit Example" value="file" />
+    <property name="ant.core.lib" value="C:\apache-ant-1.9.4\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="src.dir" value="../src" />
+    <property name="ant.project.invoked-targets" value="test" />
+  </properties>
+  <testcase classname="TestMath" name="testMulitply" time="0.0" />
+  <testcase classname="TestMath" name="testAdd" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

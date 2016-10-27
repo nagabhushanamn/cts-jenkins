@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="War Example" default="war" basedir=".">
+    
+    <target name="war">
+        <war destfile="example.war" webxml="metadata/web.xml">
+            <fileset dir="html"/>
+            <fileset dir="jsp"/>
+            <lib dir="libs"/>
+            <classes dir="classes"/>
+            <zipfileset dir="images"
+              prefix="images"/>
+        </war>
+    </target>
+    
+</project>

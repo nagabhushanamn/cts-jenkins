@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Xml Property Example" basedir=".">
+    
+    <!-- Loads properties from the sample.xml file -->
+    <xmlproperty file="sample.xml" keepRoot="false" semanticAttributes="true"/>
+    
+    
+    <!-- This is the equivalent of setting these properties -->
+    <property name="version" value="0.0.1"/>
+    <property name="build.folder" value="build"/>
+    <property name="build.classes" location="${build.folder}/classes" id="build.classes"/>
+    <property name="build.reference" refid="build.classes"/>
+
+    <property name="run-time.jars" value="*.jar"/>
+
+    <path id="compile.classpath">
+        <pathelement location="${build.classes}"/>
+    </path>
+
+    <path id="run-time.classpath">
+        <path refid="compile.classpath"/>
+        <pathelement path="${run-time.jars}"/>
+    </path>
+    
+</project>

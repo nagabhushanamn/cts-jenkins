@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Manifest Example" default="manifest" basedir=".">
+    
+    <target name="init">
+        <property name="user.name" value="Rusty" />
+    </target>
+    
+    <target name="manifest">
+        <jar destfile="manifestexample.jar" basedir=".">
+            <include name="build"/>
+            <manifest>
+                <attribute name="Permissions" value="sandbox"/>
+                <attribute name="Codebase" value="example.com"/>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Implementation-Vendor" value="Pluralsight inc."/>
+                <attribute name="Implementation-Title" value="ApacheAntCourse"/>
+                <attribute name="Implementation-Version" value="1.0"/>
+                <section name="common/MyClass.class">
+                    <attribute name="Sealed" value="false"/>
+                </section>
+            </manifest>
+        </jar>
+    </target>
+    
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Replace tokens example" default="replace" basedir=".">
+    
+    <tstamp />
+    
+    <target name="replace">
+        <copy todir="build/replacetokens">
+            <filterchain>
+                <replacetokens>
+                    <token key="TODAY" VALUE="${TODAY}" />
+                </replacetokens>
+            </filterchain>
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    
+</project>

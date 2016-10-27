@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="XML Examples" default="checkxml" basedir=".">
+    
+    <target name="init" description="Initializes properties">
+        <property name="files.dir" value="files" />
+        <property name="valid.dir" value="valid" />
+        <property name="invalid.dir" value="invalid" />
+    </target>
+    
+    <target name="checkxml" depends="init">
+        <xmlvalidate>
+            <fileset dir="${files.dir}" includes="*.xml"/>
+            <attribute name="http://xml.org/sax/features/validation" value="false"/>
+            <attribute name="http://apache.org/xml/features/validation/schema"  value="false"/>
+        </xmlvalidate>
+    </target>
+    
+    <target name="validcheck" depends="init">
+        <xmlvalidate>
+            <fileset dir="${valid.dir}" includes="*.xml"/>
+            <attribute name="http://xml.org/sax/features/validation" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema"  value="true"/>
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+        </xmlvalidate>
+    </target>
+    
+    <target name="invalidcheck" depends="init">
+        <xmlvalidate>
+            <fileset dir="${invalid.dir}" includes="*.xml"/>
+            <attribute name="http://xml.org/sax/features/validation" value="true"/>
+            <attribute name="http://apache.org/xml/features/validation/schema"  value="true"/>
+            <attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+        </xmlvalidate>
+    </target>
+   
+</project>

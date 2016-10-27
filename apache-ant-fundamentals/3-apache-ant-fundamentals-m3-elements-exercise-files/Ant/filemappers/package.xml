@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Filemapper package example" default="package" basedir=".">
+    
+    <target name="package">
+        <copy todir="build/package">
+            <mapper type="package" from="*Test.java" to="TEST-*Test.xml" />
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </copy>
+    </target>
+    
+</project>
